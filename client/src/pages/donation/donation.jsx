@@ -41,6 +41,7 @@ return (
  
 
     {
+      donations.length > 0 ? (
           donations.map((donation) => (
             <div key={donation._id} className='donation'>
               <p><b>Veg/Non-veg</b>: {donation.foodItemType}</p>
@@ -52,6 +53,9 @@ return (
               <p><b>Username </b>: {donation.username}</p>
             </div>
           ))
+      ) : (
+        <h1 className='noDonations'>No Donations</h1>
+      )
       }
     </div>
     </>
