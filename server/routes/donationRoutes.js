@@ -4,7 +4,7 @@ const authenticate = require('../authenticate');
 
 router.get('/', async (req, res) => {
     try {
-        const donations = await Donation.find({username: req.user.username});
+        const donations = await Donation.find({}).limit(8);
         res.status(200).json(donations);
     } catch (err) {
         res.status(500).json(err);
