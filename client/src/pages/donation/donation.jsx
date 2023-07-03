@@ -11,6 +11,7 @@ const token = user?.token;
 
 const [donations, setDonations] = useState([]);
 
+
 useEffect(() => {
   const fetchDonations = async () => {
     const res = await axios.get('/api/donation', {
@@ -23,9 +24,8 @@ useEffect(() => {
   fetchDonations();
 }, [token]);
 
-
-  return (
-    <>
+return (
+  <>
     <div className="donationPage">
       <div className="donationTop">
         <DonationForm/>
@@ -34,22 +34,27 @@ useEffect(() => {
     <hr className="ruler"/>
     <h1 className='donations'>Donations</h1>
     <div className="donationBottom">
-    {donations.map((donation) => (
-      <div key={donation._id} className='donation'>
-        <p><b>Veg/Non-veg</b>: {donation.foodItemType}</p>
-        <p><b>Quantity (No. of items) </b>: {donation.quantity}</p>
-        <p><b>Pickup Date </b>: {donation.pickupDate}</p>
-        <p><b>Pickup Time </b>: {donation.pickupTime}</p>
-        <p><b>Pickup Location </b>: {donation.pickupLocation}</p>
-        <p><b>Meal Size (Adult/Children) </b>: {donation.mealSize}</p>
-        <p><b>Username </b>: {donation.username}</p>
-      </div>
-    ))
-    }
+ 
+
+    {donations.length > 0 ? (
+          donations.map((donation) => (
+            <div key={donation._id} className='donation'>
+              <p><b>Veg/Non-veg</b>: {donation.foodItemType}</p>
+              <p><b>Quantity (No. of items) </b>: {donation.quantity}</p>
+              <p><b>Pickup Date </b>: {donation.pickupDate}</p>
+              <p><b>Pickup Time </b>: {donation.pickupTime}</p>
+              <p><b>Pickup Location </b>: {donation.pickupLocation}</p>
+              <p><b>Meal Size (Adult/Children) </b>: {donation.mealSize}</p>
+              <p><b>Username </b>: {donation.username}</p>
+            </div>
+          ))
+        ) : (
+          <p>No donations available</p>
+        )}
     </div>
-    
     </>
-  )}
+  )
+}
 
 
 
