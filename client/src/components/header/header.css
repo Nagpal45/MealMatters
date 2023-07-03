@@ -1,0 +1,66 @@
+.header{
+    margin-top: 0px;
+    height: calc(100vh - 60px);
+    padding: 0;
+}
+
+.headerTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lora", serif;
+    color: #FAFDD6;  
+    margin-left: 28%; 
+}
+
+.headerTitleSm{
+    position: absolute;
+    top: 16%;
+    font-size: 30px;
+}
+
+.headerTitleLg{
+    position: absolute;
+    top: 19%;
+    font-size: 120px;
+}
+
+.headerImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+
+  }
+
+  .content{
+    position: absolute;
+    top: 38%;
+    left: 12%;
+    right: 50%;
+    color: #FAFDD6 ;
+   
+  }
+  .change{
+    background-color: #A2B38B;
+  }
+  .description{
+    font-size: 25px;
+    font-weight: 400;
+  }
+  
+  
+  
+  
