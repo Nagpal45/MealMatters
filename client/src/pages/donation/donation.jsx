@@ -15,7 +15,7 @@ const [donations, setDonations] = useState([]);
 useEffect(() => {
   const fetchDonations = async () => {
     try{
-      const res = await axios.get('/donations', {
+      const res = await axios.get('/donation', {
         headers: {
           Authorization: `Bearer ${token}`,
           },
