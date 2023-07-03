@@ -16,7 +16,9 @@ useEffect(() => {
   const fetchDonations = async () => {
     try{
       const res = await axios.get('/donations', {
-        headers: { Authorization: token },
+        headers: {
+          Authorization: `Bearer ${token}`,
+          },
       });
       setDonations(res.data);
     }catch(err){
