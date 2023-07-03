@@ -2,9 +2,9 @@ const Donation = require('../models/Donation');
 const router = require('express').Router();
 const authenticate = require('../authenticate');
 
-router.get('/', async (req, res) => {
+router.get('/',authenticate, async (req, res) => {
     try {
-        const donations = await Donation.find(); 
+        const donations = await Donation.find().limit(10); 
         res.status(200).json(donations);
     } catch (err) {
         res.status(500).json(err);
