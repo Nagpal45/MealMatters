@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const DonationCenter = require('../models/DonationCenter');
+const DonationCenter = require('../models/donationCenter');
 
 
 router.get('/', async (req, res) => {
