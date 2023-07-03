@@ -40,7 +40,7 @@ return (
     <div className="donationBottom">
  
 
-    {Array.isArray(donations) && donations.length > 0 ? (
+    {
           donations.map((donation) => (
             <div key={donation._id} className='donation'>
               <p><b>Veg/Non-veg</b>: {donation.foodItemType}</p>
@@ -52,9 +52,7 @@ return (
               <p><b>Username </b>: {donation.username}</p>
             </div>
           ))
-        ) : (
-          <p>No donations available</p>
-        )}
+      }
     </div>
     </>
   )
