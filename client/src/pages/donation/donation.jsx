@@ -15,7 +15,7 @@ const [donations, setDonations] = useState([]);
 useEffect(() => {
   const fetchDonations = async () => {
     try{
-      const res = await axios.get('/api/donation', {
+      const res = await axios.get('/api/donation/', {
         headers: {
           Authorization: `Bearer ${token}`,
           },
@@ -41,7 +41,7 @@ return (
  
 
     {
-      donations.length > 0 ? (
+      Array.isArray(donations) ? (
           donations.map((donation) => (
             <div key={donation._id} className='donation'>
               <p><b>Veg/Non-veg</b>: {donation.foodItemType}</p>
