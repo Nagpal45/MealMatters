@@ -1,4 +1,5 @@
-# MealMatters : ## Hackbytes2 hackathon project
+# MealMatters 
+Hackbytes-II hackathon project
 
 ## Inspiration 
 Our hackathon project, Meal Matters, was inspired by the pressing issues of food waste and food insecurity. We wanted to create a solution that leverages technology to connect surplus food with those in need, making a meaningful impact on both fronts.
